@@ -450,3 +450,44 @@ footer {
     }
 
 }
+
+/*CAT FACT API*/
+.cat-fact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 15px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--accent);
+    margin-top: 80px;
+    color: #1c2830;
+}
+
+#catBtn {
+    background-color: var(--text);
+    padding: 12px 10px;
+    border-radius: 8px;
+    border: 2px solid var(--wh);
+    color: var(--wh);
+    font-size: 14px;
+    margin:10px;
+    transition: ease .3s all;
+    font-weight: 500;
+}
+#catBtn:hover {
+    background-color: #759DA9;
+}
+
+#dataContainer{
+    margin:10px;
+}
+#dataContainer p {
+    background: #bbf5cf88;
+    padding: 16px;
+    border-radius: 10px;
+}
