@@ -15,7 +15,9 @@ async function loadData() {
 
     const data = await response.json();
 
-    dataContainer.innerHTML = `<p>${data.fact}</p>`;
+    const p = document.createElement("p");
+    p.textContent = data.fact;
+    dataContainer.appendChild(p);
 
   } catch (error) {
     errorMessage.textContent = "Something went wrong. Please try again.";
