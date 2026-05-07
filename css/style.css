@@ -12,6 +12,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: "Work Sans", sans-serif;
     background: linear-gradient(var(--bg),var(--wh));
@@ -184,7 +187,7 @@ main h1 {
     height: auto;
     margin: 20px auto;
     border-radius: 10px;
-    transition: .5s all ease-in-out !important;
+    transition: .3s all ease-in-out !important;
 }
 .recent-img:hover {
     transform: scale(1.05);
@@ -406,6 +409,7 @@ footer {
     color:#ffffff;
     z-index: 3;
     font-size: clamp(1.8rem, 4vw, 3.5rem);
+    animation: textFadeIn 2.2s ease-out 1 forwards;
 }
 /*ABOUT US/WHAT WE DO*/
 .about-us-container {
@@ -436,6 +440,16 @@ footer {
     display: block;
     object-fit: cover;
     border-radius: 10px;
+}
+article hr {
+    display: flex;
+    max-width: 180px;
+    height: 8px;
+    background-color: var(--accent);
+    border: none;
+    border-radius: 50px;
+    align-items: center;
+    margin: 15px 10px;
 }
 /*MEET THE TEAM SECTION*/
 .about-team {
@@ -497,8 +511,76 @@ footer {
     transition: .3s ease all;
 }
 .member-card a:hover{
-    color: #005ba6;
+    color: #000000;
 }
+
+/*CAT SECTION*/
+.cat-section {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px auto;
+    align-items: center;
+    padding: 20px;
+    gap: 40px;
+}
+
+/*CAT FACT API*/
+.cat-fact {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    max-width: 500px;
+    gap: 15px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--accent);
+    color: #1c2830;
+}
+
+#catBtn {
+    background-color: var(--text);
+    padding: 12px 10px;
+    border-radius: 8px;
+    border: 2px solid var(--wh);
+    color: var(--wh);
+    font-size: 14px;
+    margin:10px;
+    transition: ease .3s all;
+    font-weight: 500;
+}
+#catBtn:hover {
+    background-color: #759DA9;
+}
+
+#dataContainer{
+    margin:10px;
+}
+#dataContainer p{
+    background: #a0ef9ea2;
+    padding: 16px;
+    border-radius: 10px;
+}
+/*CAT IMAGE*/
+.cat-image {
+    flex: 0 0 auto;;
+    max-width: clamp(150px, 25vw, 300px);
+    height: auto;
+}
+.cat-image img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+/*ANIMATED TEXT*/
+@keyframes textFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 
 /*-----------------PROJECTS PAGE-----------------*/
 /*IMAGES CONTAINER*/
@@ -566,7 +648,164 @@ footer {
     }
 }
 
-/*SMALL SCREENS*/
+
+/*-----------------CONTACT PAGE-----------------*/
+/*CONTAINER*/
+.contact-container{
+    display: flex;
+    max-width: 1200px;
+    gap: clamp(40px, 8vw, 180px); /*Suggested by ChatGPT (OpenAI, 2026)*/
+    justify-content: center;
+    align-items:  center;
+    margin: 0 auto 80px;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+/*LEFT IMAGE*/
+.contact-left{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.contact-left img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin-top: 60px;
+    
+}
+/*RIGHT FORM*/
+.contact-right{
+    flex: 1;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--accent);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 560px;
+    box-shadow: #0000003d 0px 3px 8px;
+    margin: 0 auto;
+    justify-content: center;
+    color: #000000;
+    font-weight: 600;
+    
+}
+.eb-gradient {
+    margin-top: 40px;
+    font-size: 14px; 
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    display: block;
+    background: linear-gradient(95deg, #c90021, #ffb83c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.contact-right h1{
+    font-size: clamp(2rem, 3vw, 4.4rem);
+}
+input, textarea {
+    border-radius: 18px; 
+    border: 2px solid #6e2a0a94;
+    height: 40px;
+    padding: 12px;
+    overflow: hidden;
+}
+textarea {
+    height: 120px;
+}
+input:focus, textarea:focus{
+    outline: 1px solid #00c3ff;
+}
+label {
+    padding: 0 2px;
+    font-size: clamp(1rem, 1.2vw, 1.3rem);
+}
+button[type="submit"] {
+    width: 180px;
+    margin: 8px auto 0;
+    padding: 12px 18px;
+    border-radius: 50px;
+    border: 1.5px solid #001347ee;
+    background-color: #1964a1;
+    cursor: pointer;
+    font-weight: bold;
+    color:#ffffff;
+    font-size: 1rem;
+    transition: .3s ease;
+    
+}
+button:hover {
+    background-color: #2F4250;
+    border: 1px solid #000000;
+    color: var(--wh);
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+/*Mobile*/
+@media (max-width:600px) {
+    .contact-left {
+        display: none;
+    }
+    .contact-container {
+        justify-content: center;
+        align-items: center;
+    }
+    .contact-right {
+        width: 100%;
+    }
+    form {
+        width: 100%;
+        max-width: 520px;
+    }
+}
+/*TABLET*/
+@media (min-width:600px)and (max-width: 1099px){
+    .contact-container {
+        flex-direction: column-reverse;
+        margin-top: 80px;
+    }
+    .contact-left,
+    .contact-right {
+        width: 100%;
+        flex: none;
+    }
+    form {
+        width: min(95%, 520px);
+        max-width: 850px;
+    }
+}
+/*DESKTOP*/
+@media (min-width:1100px){
+    .contact-container {
+        flex-direction: row;
+        margin-top: 20px;
+    }
+
+    .contact-left {
+        display: flex;
+    }
+
+    .contact-left img {
+        margin-top: 140px;
+    }
+}
+
+
+
+
+
+
+/*MOBILE*/
 @media (max-width: 600px) {
     .about-hero {
     height: 40vh;
@@ -593,45 +832,6 @@ footer {
 
 }
 
-/*CAT FACT API*/
-.cat-fact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    max-width: 500px;
-    margin: 80px auto;
-    gap: 15px;
-    text-align: center;
-    border-radius: 10px;
-    background-color: var(--accent);
-    color: #1c2830;
-}
-
-#catBtn {
-    background-color: var(--text);
-    padding: 12px 10px;
-    border-radius: 8px;
-    border: 2px solid var(--wh);
-    color: var(--wh);
-    font-size: 14px;
-    margin:10px;
-    transition: ease .3s all;
-    font-weight: 500;
-}
-#catBtn:hover {
-    background-color: #759DA9;
-}
-
-#dataContainer{
-    margin:10px;
-}
-#dataContainer p {
-    background: #a0ef9ea2;
-    padding: 16px;
-    border-radius: 10px;
-}
 /*REVEAL ANIMATION*/
 
 .reveal {

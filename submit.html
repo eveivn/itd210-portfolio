@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submitted</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: white;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 50px;
+        }
+        /*TEXT*/
+        .text h1{
+            font-size: clamp(1.8rem, 4vw, 3.5rem);
+        }
+        .text p{
+            font-size: clamp(1rem, 2vh, 2rem);
+            font-weight: 500;
+            padding: 8px;
+        }
+        /*ANIMATION SECTION*/
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        /* SPINNER */
+        .spinner {
+        width: 100px;
+        height: 100px;
+        border: 8px solid rgba(0,0,0,0.1);
+        border-top-color: #30d158;
+        border-radius: 50%;
+        position: relative;
+        animation: spin 1.4s linear forwards,
+                   fillGreen 0.2s ease forwards;
+        animation-delay:
+                    0s,
+                    1.4s;
+        margin: 0 auto;
+        }
+        /*This section uses the help of ChatGPT (OpenAI, 2026) to display a green checkmark at the end of spinning animation*/
+        /* CHECKMARK */
+        .spinner::after {
+        content: "✔";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        font-weight: bold;
+        color: white;
+        opacity: 0;
+        border-color: #30d158;
+        animation: showCheck 0.3s ease forwards;
+        animation-delay: 1.6s;
+        }
+
+        @keyframes showCheck {
+            to {
+                opacity: 1;
+            }
+        }
+        /* TURN ENTIRE CIRCLE GREEN */
+        @keyframes fillGreen {
+            to {
+                border-color: #30d158;
+                background-color: #30d158;
+            }
+        }
+        .link a {
+            display: inline-block;
+            text-decoration: none;
+            font-weight: bold;
+            color: #F89254;
+            transition: .3s ease all;
+        }
+        .link a:hover {
+            color: #2F4250;
+            border-bottom: 2px solid #2F4250;
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!--TEXT-->
+    <section class="text">
+        <h1>Thanks for reaching out.</h1>
+        <p>We'll get in contact soon.</p>
+    </section>
+    <!--ANIMATION-->
+    <section class="animation">
+        <div class="spinner"></div>
+    </section>
+    <section class="link">
+        <a href="index.html">Return to homepage</a>
+    </section>
+</body>
+</html>
