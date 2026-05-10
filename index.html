@@ -14,10 +14,14 @@
         <div class="logo">
             <!--PLACEHOLDER LOGO-->
             <a href="index.html">
-                <img src="images/logo.png" alt="###" class="logo-icon">
+                <img src="images/logo.png" alt="studio citrus logo" class="logo-icon">
             </a>
         </div>
-        <nav>
+        <!-- MOBILE MENU BUTTON -->
+        <button class="menu-toggle" aria-label="Open Menu">
+            ☰
+        </button>
+        <nav class="mobile-nav"> 
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -30,21 +34,44 @@
     <main>
         <!--Hero Content-->
         <section class="hero-container load-in-delay">
-            <h1>Studio <span>Citrus</span></h1>
-                <!--Parallax scrolling hero animations-->
-                <!--Placeholder images must replace-->
-                <img src="images/heroimg2.png" alt="#" id="one">
-                <img src="images/heroimg1.png" alt="#" id="two">
-                <img src="images/heroimg3.png" alt="#" id="three">
+            <div class="hero-content">
+                <h1>Studio <span style="color: #8EA249;">Citrus</span> </h1>
+                <p>Concept art, Illustrations, and Comics</p>
+                <a href="projects.html" class="btn-1">View Work</a>
+            </div>
+                <!--hero animations-->
+                <!--Hero image-->
+                <img src="images/heroimg2.png" alt="hero image" id="one">
         </section>
-        <!--Section-->
+        
+        <!--Section 1-->
+        <!--Text/Image-->
         <section class="section-container reveal">
             <div class="section-content reveal">
                 <h2>Visual Storytelling</h2>
-                <p>Studio Citrus strives to build immersive virtual and dimensional worlds with the art of illustration. Our artists are dedicated to creating original stories that have never been told before. </p>
+                <!--TEXT ENHANCED WITH THE HELP OF CHATGPT (OPENAI, 2026)-->
+                <p>Studio Citrus explores storytelling through illustration, comics, and experimental visual design. Our work is centered around atmosphere, character-driven narratives, and carefully crafted worlds that encourage curiosity and emotional connection.</p> <hr>
+                <p>Each project begins with concepts inspired by personal experiences,
+                fiction, and imaginative worldbuilding before evolving into larger visual stories through illustration, sequential art, and collaborative creative development.</p>
+                <a href="about.html" class="btn-2">Learn More</a>
             </div>
             <div class="section-image reveal">
                 <img src="images/placehold1.png" alt="#">
+            </div>
+        </section>
+        <!--Section 2-->
+        <!--IMAGE/TEXT-->
+        <section class="section-container reveal">
+            <!--IMAGE-->
+            <div class="section-image-2 reveal">
+                <img src="images/index.png" alt="two little girls hugging and smiling">
+            </div>
+            <!--TEXT-->
+            <div class="section-content reveal">
+                <h2>Always Developing</h2>
+                <p>Our projects often begin with small ideas, sketches, or personal experiences before developing into fully realized narratives through illustration and collaborative design.</p>
+                <hr>
+                <a href="series.html" class="btn-2">Read Comics</a>
             </div>
         </section>
         <!--Recently Added-->
@@ -64,29 +91,29 @@
                 </article>
                 <!--Card 2-->
                 <article class="recent-cards">
-                    <a href="#">
+                    <a href="froggirl.html">
                         <div class="recent-img">
-                        <img src="https://placehold.co/30x40" alt="placehold">
+                        <img src="images/froggirl.png" alt="Frog Girl">
                         </div>
-                        <h3>Title</h3>
+                        <h3>Frog Girl</h3>
                     </a>
                 </article>
                 <!--Card 3-->
                 <article class="recent-cards">
-                    <a href="#">
+                    <a href="storefront.html">
                         <div class="recent-img">
-                        <img src="https://placehold.co/30x40" alt="placehold">
+                        <img src="images/sfront01.png" alt="Store Front">
                         </div>
-                        <h3>Title</h3>
+                        <h3>STORE/FRONT</h3>
                     </a>
                 </article>
                 <!--Card 4-->
                 <article class="recent-cards">
-                    <a href="#">
+                    <a href="bfdiner.html">
                         <div class="recent-img">
-                        <img src="https://placehold.co/30x40" alt="placehold">
+                        <img src="images/bigfootdiner.jpg" alt="Bigfoot Diner">
                         </div>
-                        <h3>Title</h3>
+                        <h3>Bigfoot Diner</h3>
                     </a>
                 </article>
             </div>
@@ -108,7 +135,7 @@
                 </article>
                 <!--Card #2-->
                 <article class="card reveal">
-                    <a href="#">
+                    <a href="projects.html">
                         <img src="images/illustration.jpg" alt="#">
                         <div class="card-content">
                             <h3>Illustrations</h3>
@@ -117,10 +144,10 @@
                 </article>
                 <!--Card #3-->
                 <article class="card reveal">
-                    <a href="#">
+                    <a href="contact.html">
                         <img src="images/placehold2.jpg" alt="#">
                         <div class="card-content">
-                            <h3>All Projects</h3>
+                            <h3>Contact</h3>
                         </div>
                     </a>
                 </article>
@@ -138,34 +165,6 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
-
-
-    <!--TEMP CODE GENERATED WITH THE HELP OF OPENAI(2026)-->
-    <!--MUST REPLACE-->
-    <script>
-const magnet = document.getElementById("one");
-
-const strength = 40; // how far it moves (px)
-
-magnet.addEventListener("mousemove", (e) => {
-    const rect = magnet.getBoundingClientRect();
-
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-
-    const deltaX = e.clientX - centerX;
-    const deltaY = e.clientY - centerY;
-
-    const moveX = -(deltaX / rect.width) * strength;
-    const moveY = -(deltaY / rect.height) * strength;
-
-    magnet.style.transform = `translate(${moveX}px, ${moveY}px)`;
-});
-
-magnet.addEventListener("mouseleave", () => {
-    magnet.style.transform = "translate(0, 0)";
-});
-</script>
 
 </body>
 </html>

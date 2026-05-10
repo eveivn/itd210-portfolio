@@ -13,8 +13,8 @@
         background-color: #f0f8ff06;
         backdrop-filter: blur(50px);
     }
-    .nav-links a {
-        color: white;
+    .nav-links a, .menu-toggle {
+        color: #000000;
     }
 </style>
 </head>
@@ -25,7 +25,11 @@
                 <img src="images/logo3.png" alt="###" class="logo-icon">
             </a>
         </div>
-        <nav>
+        <!-- MOBILE MENU BUTTON -->
+        <button class="menu-toggle" aria-label="Open Menu">
+            ☰
+        </button>
+        <nav class="mobile-nav"> 
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -38,7 +42,7 @@
     <main>
         <!--Hero Section-->
         <section class="about-hero reveal">
-                <img src="images/20240329_122122.jpg" alt="">
+                <img src="images/illustration.jpg" alt="">
             <h1>About Us</h1>
         </section>
         <!--About Us IMG/TEXT-->
@@ -123,7 +127,7 @@
         <!--End Cat Fact-->
         <!--Begin Cat Image-->
         <div class="cat-image">
-            <img src="images/catimage.jpg" alt="illustration of a grey kitty">
+            <img src="images/catanimation.gif" alt="illustration of a grey kitty">
         </div>
     </main>
     <footer>

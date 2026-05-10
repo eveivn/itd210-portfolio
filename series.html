@@ -9,18 +9,26 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+<style>
+    header {
+        background-color: #1e3142;
+    }
+</style>
 </head>
 <body>
     <header>
         <div class="logo">
             <!--PLACEHOLDER LOGO-->
             <a href="index.html">
-                <img src="images/logo.png" alt="###" class="logo-icon">
+                <img src="images/logo3.png" alt="###" class="logo-icon">
             </a>
         </div>
         <!--NAVIGATION-->
-        <nav>
+        <!-- MOBILE MENU BUTTON -->
+        <button class="menu-toggle" aria-label="Open Menu">
+            ☰
+        </button>
+        <nav class="mobile-nav"> 
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -47,25 +55,8 @@
         <div>
             <!-- IMAGE WRAPPER -->
             <div class="overflow-hidden rounded cursor-pointer">
-                <img class="w-full aspect-[5/7] object-cover transition duration-500 hover:scale-110" 
-                src="images/placehold1.png">
-            </div>
-            <!--COMIC CONTENT/TEXT/ICON-->
-            <div class="flex items-center justify-between">
-                <!--TEXT/COMIC TITLE-->
-            <h3 class="text-xl font-semibold  text-gray-700 mt-3 mb-3 text-left">
-            Smoothie</h3>
-            <!--ICON-->
-            <img class="w-12 h-12 object-cover rounded-full shadow-md mb-2 mt-2" src="images/carleigh.png">
-            </div>
-        </div>
-
-        <!-- CARD 2 -->
-        <div>
-            <!-- IMAGE WRAPPER -->
-            <div class="overflow-hidden rounded cursor-pointer">
-                <img class="w-full aspect-[5/7] object-cover transition duration-500 hover:scale-110" 
-                src="images/spoilsofthegarden.jpg" alt="spoils of the garden by carleigh ross">
+                <a href="sotg.html"><img class="w-full aspect-[5/7] object-cover transition duration-500 hover:scale-110" 
+                src="images/spoilsofthegarden.jpg" alt="spoils of the garden by carleigh ross"></a> 
             </div>
             <!--COMIC CONTENT/TEXT/ICON-->
             <div class="flex items-center justify-between">
@@ -73,33 +64,16 @@
             <h3 class="text-xl font-semibold  text-gray-700 mt-3 mb-3 text-left">
             Spoils of the Garden</h3>
             <!--ICON-->
-            <img class="w-12 h-12 object-cover rounded-full shadow-md mb-2 mt-2" src="images/carleigh.png">
+            <img class="w-12 h-12 object-cover rounded-full shadow-md mb-2 mt-2" src="images/carleigh.png" alt="carleigh">
             </div>
         </div>
 
-        <!-- CARD 3 -->
+        <!-- CARD 2 -->
         <div>
             <!-- IMAGE WRAPPER -->
             <div class="overflow-hidden rounded cursor-pointer">
-                <img class="w-full aspect-[5/7] object-cover transition duration-500 hover:scale-110" 
-                src="images/eatyourheartout.jpg" alt="eat your heart out by carleigh ross">
-            </div>
-            <!--COMIC CONTENT/TEXT/ICON-->
-            <div class="flex items-center justify-between">
-                <!--TEXT/COMIC TITLE-->
-            <h3 class="text-xl font-semibold  text-gray-700 mt-3 mb-3 text-left">
-            Eat Your Heart Out</h3>
-            <!--ICON-->
-            <img class="w-12 h-12 object-cover rounded-full shadow-md mb-2 mt-2" src="images/carleigh.png">
-            </div>
-        </div>
-
-        <!-- CARD 4 -->
-        <div>
-            <!-- IMAGE WRAPPER -->
-            <div class="overflow-hidden rounded cursor-pointer">
-                <img class="w-full aspect-[5/7] object-cover transition duration-500 hover:scale-110" 
-                src="images/bigfootdiner.jpg" alt="bigfoot diner by carleigh ross">
+                <a href="bfdiner.html"><img class="w-full aspect-[5/7] object-cover transition duration-500 hover:scale-110" 
+                src="images/bigfootdiner.jpg" alt="Bigfoot Diner by carleigh ross"></a> 
             </div>
             <!--COMIC CONTENT/TEXT/ICON-->
             <div class="flex items-center justify-between">
@@ -107,7 +81,42 @@
             <h3 class="text-xl font-semibold  text-gray-700 mt-3 mb-3 text-left">
             Bigfoot Diner</h3>
             <!--ICON-->
-            <img class="w-12 h-12 object-cover rounded-full shadow-md mb-2 mt-2" src="images/carleigh.png">
+            <img class="w-12 h-12 object-cover rounded-full shadow-md mb-2 mt-2" src="images/carleigh.png" alt="carleigh">
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div>
+            <!-- IMAGE WRAPPER -->
+            <div class="overflow-hidden rounded cursor-pointer">
+                <a href="froggirl.html"><img class="w-full aspect-[5/7] object-cover transition duration-500 hover:scale-110" 
+                src="images/froggirl.png" alt="frog girl by carleigh ross"></a>
+            </div>
+            <!--COMIC CONTENT/TEXT/ICON-->
+            <div class="flex items-center justify-between">
+                <!--TEXT/COMIC TITLE-->
+            <h3 class="text-xl font-semibold  text-gray-700 mt-3 mb-3 text-left">
+            Frog Girl</h3>
+            <!--ICON-->
+            <img class="w-12 h-12 object-cover rounded-full shadow-md mb-2 mt-2" src="images/carleigh.png" alt="carleigh">
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div>
+            <!-- IMAGE WRAPPER -->
+            <div class="overflow-hidden rounded cursor-pointer">
+                <a href="storefront.html"><img class="w-full aspect-[5/7] object-cover transition duration-500 hover:scale-110" 
+                src="images/sfront01.png" alt="storefront by carleigh ross">
+                </a>
+            </div>
+            <!--COMIC CONTENT/TEXT/ICON-->
+            <div class="flex items-center justify-between">
+                <!--TEXT/COMIC TITLE-->
+            <h3 class="text-xl font-semibold  text-gray-700 mt-3 mb-3 text-left">
+            STORE/FRONT</h3>
+            <!--ICON-->
+            <img class="w-12 h-12 object-cover rounded-full shadow-md mb-2 mt-2" src="images/carleigh.png" alt="carleigh">
             </div>
         </div>
     </div>
@@ -128,15 +137,15 @@
             <!-- IMAGE WRAPPER -->
             <div class="overflow-hidden rounded cursor-pointer">
                 <img class="w-full aspect-[5/7] object-cover transition duration-500 hover:scale-110" 
-                src="images/placehold2.jpg">
+                src="images/placehold2.jpg" alt="dark blue and pink building at night">
             </div>
             <!--COMIC CONTENT/TEXT/ICON-->
             <div class="flex items-center justify-between">
             <!--TEXT/COMIC TITLE-->
             <h3 class="text-lg font-bold text-gray-700 mt-3 mb-3 text-left">
-            Placehold</h3>
+            Smoothie</h3>
             <!--ICON-->
-            <img class="w-12 h-12 object-cover rounded-full shadow-md mb-2 mt-2" src="images/userplacehold.png">
+            <img class="w-12 h-12 object-cover rounded-full shadow-md mb-2 mt-2" src="images/userplacehold.png" alt="user">
             </div>
         </div>
 
@@ -145,15 +154,15 @@
             <!-- IMAGE WRAPPER -->
             <div class="overflow-hidden rounded cursor-pointer">
                 <img class="w-full aspect-[5/7] object-cover transition duration-500 hover:scale-110" 
-                src="images/placehold2.jpg" alt="spoils of the garden by carleigh ross">
+                src="images/eatyourheartout.jpg" alt="zombies playing baseball">
             </div>
             <!--COMIC CONTENT/TEXT/ICON-->
             <div class="flex items-center justify-between">
             <!--TEXT/COMIC TITLE-->
             <h3 class="text-lg font-bold text-gray-700 mt-3 mb-3 text-left">
-            Placehold</h3>
+            Eat Your Heart Out</h3>
             <!--ICON-->
-            <img class="w-12 h-12 object-cover rounded-full shadow-md mb-2 mt-2" src="images/userplacehold.png">
+            <img class="w-12 h-12 object-cover rounded-full shadow-md mb-2 mt-2" src="images/carleigh.png" alt="carleigh">
             </div>
         </div>
 
@@ -162,15 +171,15 @@
             <!-- IMAGE WRAPPER -->
             <div class="overflow-hidden rounded cursor-pointer">
                 <img class="w-full aspect-[5/7] object-cover transition duration-500 hover:scale-110" 
-                src="images/placehold2.jpg" alt="eat your heart out by carleigh ross">
+                src="images/image8.png" alt="don't look by carleigh ross">
             </div>
             <!--COMIC CONTENT/TEXT/ICON-->
             <div class="flex items-center justify-between">
             <!--TEXT/COMIC TITLE-->
             <h3 class="text-lg font-bold text-gray-700 mt-3 mb-3 text-left">
-            Placehold</h3>
+            Don't Look</h3>
             <!--ICON-->
-            <img class="w-12 h-12 object-cover rounded-full shadow-md mb-2 mt-2" src="images/userplacehold.png">
+            <img class="w-12 h-12 object-cover rounded-full shadow-md mb-2 mt-2" src="images/carleigh.png" alt="carleigh">
             </div>
         </div>
 
@@ -179,15 +188,15 @@
             <!-- IMAGE WRAPPER -->
             <div class="overflow-hidden rounded cursor-pointer">
                 <img class="w-full aspect-[5/7] object-cover transition duration-500 hover:scale-110" 
-                src="images/placehold2.jpg" alt="bigfoot diner by carleigh ross">
+                src="images/illustration.jpg" alt="day in the life by carleigh ross">
             </div>
             <!--COMIC CONTENT/TEXT/ICON-->
             <div class="flex items-center justify-between">
             <!--TEXT/COMIC TITLE-->
             <h3 class="text-lg font-bold text-gray-700 mt-3 mb-3 text-left">
-            Placehold</h3>
+            Day in the Life</h3>
             <!--ICON-->
-            <img class="w-12 h-12 object-cover rounded-full shadow-md mb-2 mt-2" src="images/userplacehold.png">
+            <img class="w-12 h-12 object-cover rounded-full shadow-md mb-2 mt-2" src="images/carleigh.png" alt="carleigh">
             </div>
         </div>
     </div>

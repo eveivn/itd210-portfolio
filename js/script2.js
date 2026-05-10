@@ -56,3 +56,18 @@ document.getElementById("catBtn").addEventListener("click", loadData);
 
   // Run again every time the user scrolls
   window.addEventListener("scroll", revealOnScroll);
+
+  // MOBILE MENU
+const menuToggle = document.querySelector(".menu-toggle");
+const mobileNav = document.querySelector(".mobile-nav");
+
+menuToggle.addEventListener("click", () => {
+    mobileNav.classList.toggle("active");
+
+    // change icon
+    if (mobileNav.classList.contains("active")) {
+        menuToggle.textContent = "✕";
+    } else {
+        menuToggle.textContent = "☰";
+    }
+});
